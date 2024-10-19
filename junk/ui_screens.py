@@ -106,12 +106,10 @@ class CombatScreen(tk.Frame):
 # Example Usage
 if __name__ == "__main__":
     from models.player import Player
-    from models.ship import Ship
     from models.star_system import StarSystem
 
     # Create player, ship, and star systems
     player = Player(race="Human")
-    ship = Ship()
     star_systems = [
         StarSystem(name="Alpha Centauri", difficulty_level=1),
         StarSystem(name="Betelgeuse", difficulty_level=2),
@@ -119,7 +117,7 @@ if __name__ == "__main__":
     ]
 
     # Create GameController
-    game_controller = GameController(player, ship, star_systems)
+    game_controller = GameController(player, star_systems)
 
     # Create the game UI
     app = GameUI(game_controller)

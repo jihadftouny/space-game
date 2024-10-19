@@ -19,7 +19,7 @@ class Player:
 
     def add_resource(self, resource, amount):
         current_total = sum(self.resources.values())
-        if current_total + amount <= self.max_resources:
+        if current_total + amount <= self.size:
             self.resources[resource] = min(self.resources.get(resource, 0) + amount, 7)
         else:
             print("Not enough space to add more resources.")
